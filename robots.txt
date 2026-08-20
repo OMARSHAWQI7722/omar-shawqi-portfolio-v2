@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omarshawqi7722.github.io/omar-shawqi-portfolio/sitemap.xml
