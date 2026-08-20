@@ -110,31 +110,6 @@ const projectsData = [
     }
   },
   {
-    id: "ayat",
-    categories: ["marketing", "business"],
-    tag: "Branding · Marketing · Sales",
-    title: "AYAT",
-    desc: "A campus-focused perfume brand concept developed around STP, branding, the marketing mix, digital promotion, sales funnels, and CRM.",
-    role: "Brand &amp; Marketing Strategy",
-    status: "Concept · Academic Project",
-    tech: ["STP", "4Ps", "Branding", "CRM", "Sales Funnel"],
-    live: null,
-    github: null,
-    case: {
-      overview: "A campus-focused perfume brand concept developed around segmentation, targeting, positioning (STP), branding, and the marketing mix.",
-      problem: "Campus students wanted an affordable, relatable perfume brand tailored to their identity, rather than only established retail brands.",
-      idea: "Develop a perfume brand concept for the campus market using STP, branding, and a full marketing-mix strategy.",
-      role: "Brand and marketing strategy development (academic project).",
-      technologies: "STP, 4Ps, Branding, Digital Marketing, Sales Funnel, CRM.",
-      process: "Defined target segments, developed brand identity and positioning, and mapped a marketing mix and sales funnel with a CRM approach for customer engagement.",
-      strategy: "Position AYAT as an accessible, campus-relatable brand using digital promotion and funnel-based customer engagement.",
-      challenges: "Designing a credible go-to-market plan without a real production and distribution setup.",
-      solution: "A structured marketing plan covering branding, funnel stages, and customer engagement/CRM touchpoints.",
-      outcome: "Current Status — Concept / Academic Project.",
-      learned: "Applied branding and marketing-mix theory (STP, 4Ps, CRM, funnels) to a realistic campus business scenario."
-    }
-  },
-  {
     id: "vlan-network",
     categories: ["tech"],
     tag: "Networking · Computer Science",
@@ -398,6 +373,49 @@ window.addEventListener("load", () => {
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`;
   }
 
+  /* Project images — each project gets its own folder at
+     images/projects/<project-id>/ . Drop a "cover.jpg" (or .jpeg/.png/.webp)
+     in there for the card thumbnail, and optional "1.jpg", "2.jpg", "3.jpg",
+     "4.jpg" (any of the same formats) for a small gallery inside the case
+     study. Nothing needs to be edited here — missing images are skipped
+     automatically. */
+  const IMG_EXTS = ["jpg", "jpeg", "png", "webp"];
+
+  function tryImageSources(sources, cb) {
+    let i = 0;
+    (function next() {
+      if (i >= sources.length) { cb(null); return; }
+      const url = sources[i++];
+      const img = new Image();
+      img.onload = () => cb(url);
+      img.onerror = next;
+      img.src = url;
+    })();
+  }
+
+  function coverCandidates(id) {
+    return IMG_EXTS.map(ext => `images/projects/${id}/cover.${ext}`);
+  }
+
+  function galleryCandidates(id, n) {
+    return IMG_EXTS.map(ext => `images/projects/${id}/${n}.${ext}`);
+  }
+
+  function loadCardImage(id) {
+    const visual = grid.querySelector(`.project-card[data-id="${id}"] .pc-visual`);
+    if (!visual) return;
+    tryImageSources(coverCandidates(id), (url) => {
+      if (!url || !visual.isConnected) return;
+      visual.classList.add("has-image");
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = "";
+      img.loading = "lazy";
+      img.className = "pc-img";
+      visual.prepend(img);
+    });
+  }
+
   function renderCards(list) {
     grid.innerHTML = list.map(p => `
       <article class="project-card" data-id="${p.id}">
@@ -423,6 +441,8 @@ window.addEventListener("load", () => {
     grid.querySelectorAll(".case-study-btn").forEach(btn => {
       btn.addEventListener("click", () => openModal(btn.dataset.id));
     });
+
+    list.forEach(p => loadCardImage(p.id));
   }
 
   renderCards(projectsData);
@@ -456,6 +476,7 @@ window.addEventListener("load", () => {
             </button>
           </div>
           <div class="modal-body">
+            <div class="cs-gallery" id="cs-gallery"></div>
             <div class="cs-block"><h4>Overview</h4><p>${c.overview}</p></div>
             <div class="cs-grid">
               <div class="cs-block"><h4>Problem</h4><p>${c.problem}</p></div>
@@ -483,6 +504,24 @@ window.addEventListener("load", () => {
     const overlay = document.getElementById("active-modal");
     requestAnimationFrame(() => overlay.classList.add("open"));
     document.body.style.overflow = "hidden";
+
+    // Optional gallery: images/projects/<id>/1.*, 2.*, 3.*, 4.* — any found are shown.
+    const galleryEl = document.getElementById("cs-gallery");
+    const found = [];
+    (function checkNext(n) {
+      if (n > 4) {
+        if (found.length && galleryEl) {
+          galleryEl.innerHTML = found.map(src =>
+            `<img src="${src}" alt="${p.title}" loading="lazy" onclick="window.open('${src}','_blank')">`
+          ).join("");
+        }
+        return;
+      }
+      tryImageSources(galleryCandidates(p.id, n), (url) => {
+        if (url) found.push(url);
+        checkNext(n + 1);
+      });
+    })(1);
 
     function close() {
       overlay.classList.remove("open");
@@ -719,7 +758,7 @@ window.addEventListener("load", () => {
 
   document.querySelectorAll(".omaros-cmd").forEach(btn => {
     btn.addEventListener("click", () => {
-      const target = document.querySelector(btn.dataset.goto);
+      const target = document.querySelector(btn.data-goto);
       if (target) target.scrollIntoView({ behavior: "smooth" });
       close();
     });
