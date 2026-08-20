@@ -16,6 +16,714 @@
 <meta property="og:description" content="Computer Science student, entrepreneur, and AI &amp; web developer building digital products, businesses, and technology-driven solutions.">
 <meta property="og:url" content="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/">
 <meta property="og:image" content="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/images/og-cover.png">
+<meta property="og:site_name" content="Omar Shawqi â Portfolio">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Omar Shawqi | Building Technology, Business & Innovation">
+<meta name="twitter:description" content="Computer Science student, entrepreneur, and AI &amp; web developer building digital products, businesses, and technology-driven solutions.">
+<meta name="twitter:image" content="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/images/og-cover.png">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- Loader -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">OS</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Backdrop -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" id="navbar">
+  <a href="#home" class="nav-brand">
+    <span class="nav-mark">OS</span>
+    <span><span class="first">Omar</span> <span class="last">Shawqi</span></span>
+  </a>
+
+  <div class="nav-center">
+    <ul class="nav-links" id="nav-links-desktop">
+      <li><a href="#home" data-nav>Home</a></li>
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#experience" data-nav>Experience</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#ventures" data-nav>Ventures</a></li>
+      <li><a href="#achievements" data-nav>Achievements</a></li>
+      <li><a href="#certifications" data-nav>Certifications</a></li>
+      <li><a href="#impact" data-nav>Social Impact</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-right">
+    <span class="status-chip"><span class="status-dot"></span> Available for Opportunities</span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <div class="cv-dropdown">
+      <button class="btn-cv magnetic" aria-haspopup="true">
+        Download CV
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="cv-menu">
+        <a href="https://drive.google.com/file/d/1i85Rg5xMcmeoHHpS-Fsw4YusQt8aVeJi/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV â English</a>
+        <a href="https://drive.google.com/file/d/1hweKn7cTZ2HvL1-ZVxnx6rxiwaG3Mkc5/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV â Arabic</a>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+<ul id="nav-menu" aria-label="Mobile navigation">
+  <a href="#home" data-nav>Home</a>
+  <a href="#about" data-nav>About</a>
+  <a href="#projects" data-nav>Projects</a>
+  <a href="#experience" data-nav>Experience</a>
+  <a href="#skills" data-nav>Skills</a>
+  <a href="#ventures" data-nav>Ventures</a>
+  <a href="#achievements" data-nav>Achievements</a>
+  <a href="#certifications" data-nav>Certifications</a>
+  <a href="#impact" data-nav>Social Impact</a>
+  <a href="#contact" data-nav>Contact</a>
+  <div class="mobile-extra">
+    <span class="status-chip"><span class="status-dot"></span> Available for Opportunities</span>
+    <a href="https://drive.google.com/file/d/1i85Rg5xMcmeoHHpS-Fsw4YusQt8aVeJi/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary btn-block">Download CV (EN)</a>
+  </div>
+</ul>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-badge">ð¢ Available for Opportunities</div>
+
+  <img src="images/profile.jpg" alt="Omar Shawqi" class="hero-portrait" loading="lazy">
+
+  <p class="hero-name">Omar Shawqi</p>
+
+  <h1 class="hero-headline">
+    Building Technology,<br><span class="line2">Business &amp; Innovation.</span>
+  </h1>
+
+  <p class="hero-role">Computer Science Student <span class="sep">Â·</span> Entrepreneur <span class="sep">Â·</span> AI &amp; Web Developer</p>
+
+  <p class="hero-text">
+    I build digital products, businesses, and technology-driven solutions while exploring the intersection
+    of software, artificial intelligence, entrepreneurship, and digital marketing.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#projects" class="btn btn-primary magnetic">
+      View My Work
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://drive.google.com/file/d/1i85Rg5xMcmeoHHpS-Fsw4YusQt8aVeJi/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline magnetic">
+      Download CV
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+    </a>
+    <a href="#contact" class="btn btn-ghost magnetic">Let's Connect</a>
+  </div>
+
+  <div class="expertise-strip" aria-label="Areas of expertise">
+    <div class="expertise-track">
+      <span>Software Development</span><span class="dot">â¢</span>
+      <span>AI &amp; Data</span><span class="dot">â¢</span>
+      <span>Web Development</span><span class="dot">â¢</span>
+      <span>Entrepreneurship</span><span class="dot">â¢</span>
+      <span>Digital Marketing</span><span class="dot">â¢</span>
+      <span>Innovation</span><span class="dot">â¢</span>
+      <span>Software Development</span><span class="dot">â¢</span>
+      <span>AI &amp; Data</span><span class="dot">â¢</span>
+      <span>Web Development</span><span class="dot">â¢</span>
+      <span>Entrepreneurship</span><span class="dot">â¢</span>
+      <span>Digital Marketing</span><span class="dot">â¢</span>
+      <span>Innovation</span><span class="dot">â¢</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO â MORE THAN CODE ================= -->
+<section class="section-pad" id="intro">
+  <div class="container">
+    <div class="intro-grid reveal">
+      <div class="intro-text">
+        <div class="eyebrow">Personal Brand</div>
+        <h2>More Than Code. <span class="accent-word">I Build.</span></h2>
+        <p>I am a Computer Science student with a strong interest in software development, artificial intelligence, business, digital marketing, and entrepreneurship.</p>
+        <p>My journey combines technical learning with real-world experimentation through digital businesses, technology projects, marketing initiatives, and community-focused ideas.</p>
+        <p>I am interested in opportunities where technology, business, and social impact come together.</p>
+      </div>
+      <div class="build-cards reveal-stagger">
+        <div class="build-card">
+          <div class="num">01</div>
+          <h3>BUILD</h3>
+          <p>Software, websites, digital products and technical projects.</p>
+        </div>
+        <div class="build-card">
+          <div class="num">02</div>
+          <h3>BUSINESS</h3>
+          <p>E-commerce, entrepreneurship, product ideas and business strategy.</p>
+        </div>
+        <div class="build-card">
+          <div class="num">03</div>
+          <h3>GROW</h3>
+          <p>Digital marketing, branding, sales and customer experience.</p>
+        </div>
+        <div class="build-card">
+          <div class="num">04</div>
+          <h3>IMPACT</h3>
+          <p>Community initiatives, education, sustainability and technology for social good.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= ABOUT ================= -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="eyebrow reveal">Get To Know Me</div>
+    <h2 class="section-title reveal">Who I <span class="accent-word">Am</span></h2>
+
+    <div class="about-grid">
+      <img src="images/profile.jpg" alt="Omar Shawqi" class="about-portrait" loading="lazy">
+
+      <div class="about-content">
+        <div class="about-block reveal">
+          <h3>Who I Am</h3>
+          <p>I'm a Computer Science student at Albukhary International University in Malaysia, with interests in software development, AI, web development, entrepreneurship, and digital marketing. I combine programming, marketing, and entrepreneurship to build creative online projects and impactful digital experiences.</p>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>What I Care About</h3>
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Building useful technology</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Learning continuously</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Turning ideas into real projects</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Entrepreneurship and innovation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Community impact</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Bridging technology and business</li>
+          </ul>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>What I'm Looking For</h3>
+          <p>I am open to internships, technology opportunities, software projects, freelance collaborations, entrepreneurship opportunities, volunteering, student initiatives, international organizations, and innovative projects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section-pad" id="projects">
+  <div class="container">
+    <div class="eyebrow reveal">My Work</div>
+    <h2 class="section-title reveal">Selected <span class="accent-word">Work</span></h2>
+    <p class="section-sub reveal">Projects where technology, business, design, and strategy meet.</p>
+
+    <div class="project-filters reveal" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="business">Business &amp; E-Commerce</button>
+      <button class="filter-btn" data-filter="tech">Technology</button>
+      <button class="filter-btn" data-filter="marketing">Marketing &amp; Branding</button>
+      <button class="filter-btn" data-filter="social">Community</button>
+    </div>
+
+    <div class="projects-grid reveal-stagger" id="projects-grid"><!-- injected by script.js from projectsData --></div>
+  </div>
+</section>
+
+<div id="modal-root"></div>
+
+<div class="divider"></div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section-pad" id="experience">
+  <div class="container">
+    <div class="eyebrow reveal">Career Path</div>
+    <h2 class="section-title reveal">Experience &amp; <span class="accent-word">Journey</span></h2>
+    <p class="section-sub reveal">Where I've applied what I've learned â in business, marketing, and technology.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-date">2025 â Present</span>
+          <h3>Founder â Elite Vibes</h3>
+          <h4>Digital Services &amp; E-Commerce</h4>
+          <p>Founded and manage a digital services store built on Odoo, offering premium subscriptions, social media services, digital payments, and online solutions through a modern e-commerce experience.</p>
+          <div class="tl-skills"><span>Business Development</span><span>Odoo</span><span>Digital Services</span><span>Customer Management</span><span>Marketing</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-date">2025 â Present</span>
+          <h3>Founder â OZO Store</h3>
+          <h4>Watch E-Commerce &amp; Entrepreneurship</h4>
+          <p>Built and manage an online luxury watch store â product presentation, branding, customer communication, and online sales through a dedicated Odoo storefront.</p>
+          <div class="tl-skills"><span>E-Commerce</span><span>Product Management</span><span>Customer Relations</span><span>Social Media Marketing</span><span>Sales</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-date">2026</span>
+          <h3>Founder â Next Stack</h3>
+          <h4>Technology &amp; Student Initiative</h4>
+          <p>Founded Next Stack, a student-led tech community at Albukhary International University focused on bridging the gap between academia and the real job market through workshops, real-world projects, and career-focused programs.</p>
+          <div class="tl-skills"><span>Community Building</span><span>Tech Education</span><span>Workshops</span><span>Career Development</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-date">2025 â 2026</span>
+          <h3>Arvil Company</h3>
+          <h4>Sales &amp; Marketing Intermediary <span style="font-weight:400;color:var(--text-3);">(business collaboration, not formal employment)</span></h4>
+          <p>Worked as a communication and marketing intermediary â attracting students, coordinating registrations, handling payments, and building client relationships across Yemen and Egypt.</p>
+          <div class="tl-skills"><span>Client Communication</span><span>Sales</span><span>Payment Coordination</span><span>Cross-border Coordination</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="timeline-card">
+          <span class="tl-date">Sep 2023 â Feb 2024</span>
+          <h3>Third Eye Academic</h3>
+          <h4>Programming Trainee</h4>
+          <p>Completed an intensive training program focused on HTML, CSS, and JavaScript while building modern front-end development foundations and practical coding skills.</p>
+          <div class="tl-skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Front-End Foundations</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= SKILLS ================= -->
+<section class="section-pad" id="skills">
+  <div class="container">
+    <div class="eyebrow reveal">Capabilities</div>
+    <h2 class="section-title reveal">My <span class="accent-word">Skills</span></h2>
+    <p class="section-sub reveal">A combination of technical, business, and creative capabilities â built through real projects, not just theory.</p>
+
+    <div class="skills-grid reveal-stagger">
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div><h3>Programming</h3></div>
+        </div>
+        <div class="skill-tags">
+          <span>C</span><span>C++</span><span>Python</span><span>Java</span><span>JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <div><h3>Web Development</h3></div>
+        </div>
+        <div class="skill-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>Frontend Development</span><span>GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <div><h3>AI &amp; Data</h3><div class="skill-note">Academic foundations</div></div>
+        </div>
+        <div class="skill-tags">
+          <span>Python</span><span>Data Analysis</span><span>AI Fundamentals</span><span>Data Science Fundamentals</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="22 4 12 14 9 11 2 18"/></svg></div>
+          <div><h3>Business</h3></div>
+        </div>
+        <div class="skill-tags">
+          <span>E-Commerce</span><span>Entrepreneurship</span><span>Business Strategy</span><span>Market Research</span><span>Sales</span><span>Customer Management</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+          <div><h3>Marketing</h3></div>
+        </div>
+        <div class="skill-tags">
+          <span>Digital Marketing</span><span>Social Media Marketing</span><span>Branding</span><span>Content Creation</span><span>Meta Ads</span><span>Customer Engagement</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div><h3>Design &amp; Tools</h3></div>
+        </div>
+        <div class="skill-tags">
+          <span>Canva</span><span>Figma</span><span>Odoo</span><span>WordPress</span><span>GitHub</span><span>Microsoft Office</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= VENTURES ================= -->
+<section class="section-pad" id="ventures">
+  <div class="container">
+    <div class="eyebrow reveal">Building Beyond Code</div>
+    <h2 class="section-title reveal">Ventures</h2>
+    <p class="section-sub reveal">I don't just learn technology â I experiment with it, build businesses around it, and explore how technology can solve real-world problems.</p>
+
+    <div class="ventures-grid reveal-stagger">
+      <div class="venture-card">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <h3>Elite Vibes</h3>
+        <p>Digital Services</p>
+      </div>
+      <div class="venture-card">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>OZO Store</h3>
+        <p>E-Commerce</p>
+      </div>
+      <div class="venture-card">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg></div>
+        <h3>Next Stack</h3>
+        <p>Student Technology Initiative</p>
+      </div>
+      <div class="venture-card future">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <h3>Future Ventures</h3>
+        <p>More ideas are being explored.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:60px auto;"></div>
+
+    <div class="eyebrow reveal">Live Status</div>
+    <h2 class="section-title reveal" style="font-size:clamp(1.7rem,3vw,2.3rem);">Currently <span class="accent-word">Building</span></h2>
+
+    <div class="building-grid reveal-stagger" id="building-grid">
+      <div class="building-card"><span class="building-status active"></span><div class="building-info"><h4>Portfolio 2.0</h4><span>Active</span></div></div>
+      <div class="building-card"><span class="building-status active"></span><div class="building-info"><h4>Next Stack</h4><span>Active</span></div></div>
+      <div class="building-card"><span class="building-status exploring"></span><div class="building-info"><h4>AI Projects</h4><span>Exploring</span></div></div>
+      <div class="building-card"><span class="building-status exploring"></span><div class="building-info"><h4>New Digital Products</h4><span>Exploring</span></div></div>
+      <div class="building-card"><span class="building-status exploring"></span><div class="building-info"><h4>Community Initiatives</h4><span>Exploring</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="section-pad" id="achievements">
+  <div class="container">
+    <div class="eyebrow reveal">Milestones</div>
+    <h2 class="section-title reveal">Achievements &amp; <span class="accent-word">Milestones</span></h2>
+    <p class="section-sub reveal">Verified numbers only â nothing here is estimated or exaggerated.</p>
+
+    <div class="achieve-grid reveal-stagger">
+      <div class="achieve-stat"><div class="num" data-counter="3">0</div><div class="label">Ventures Founded</div></div>
+      <div class="achieve-stat"><div class="num" data-counter="9">0</div><div class="label">Projects Built</div></div>
+      <div class="achieve-stat"><div class="num" data-counter="4">0</div><div class="label">Community &amp; Volunteer Programs</div></div>
+      <div class="achieve-stat"><div class="num" data-counter="7">0</div><div class="label">Core Programming &amp; Web Languages</div></div>
+    </div>
+
+    <div class="achieve-list reveal-stagger">
+      <div class="achieve-item">
+        <div class="ai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+        <div><span class="ai-tag">Academic</span><h4>Computer Science, Albukhary International University</h4><p>Ongoing CS studies in Malaysia, building a technical foundation alongside real-world projects.</p></div>
+      </div>
+      <div class="achieve-item">
+        <div class="ai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div>
+        <div><span class="ai-tag">Entrepreneurship</span><h4>Founded 3 Independent Ventures</h4><p>Elite Vibes, OZO Store, and Next Stack â each founded, built, and managed independently.</p></div>
+      </div>
+      <div class="achieve-item">
+        <div class="ai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div><span class="ai-tag">Technology</span><h4>9 Projects Shipped or in Progress</h4><p>Spanning e-commerce platforms, desktop software, C++ systems, and web development.</p></div>
+      </div>
+      <div class="achieve-item">
+        <div class="ai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div><span class="ai-tag">Leadership &amp; Community</span><h4>Founder &amp; Community Organizer</h4><p>Leading Next Stack as a student-led technology community, plus ongoing volunteering with humanitarian organizations.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="section-pad" id="certifications">
+  <div class="container">
+    <div class="eyebrow reveal">Learning</div>
+    <h2 class="section-title reveal">Certifications &amp; <span class="accent-word">Learning</span></h2>
+    <p class="section-sub reveal">A growing, editable record of formal training and courses.</p>
+
+    <div class="project-filters reveal" role="tablist" aria-label="Filter certifications by category">
+      <button class="filter-btn active" data-cert-filter="all">All</button>
+      <button class="filter-btn" data-cert-filter="technology">Technology</button>
+      <button class="filter-btn" data-cert-filter="data">Data</button>
+      <button class="filter-btn" data-cert-filter="business">Business</button>
+      <button class="filter-btn" data-cert-filter="marketing">Marketing</button>
+      <button class="filter-btn" data-cert-filter="other">Other</button>
+    </div>
+
+    <div class="cert-grid reveal-stagger" id="cert-grid"><!-- injected by script.js --></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= SOCIAL IMPACT ================= -->
+<section class="section-pad" id="impact">
+  <div class="container">
+    <div class="eyebrow reveal">Purpose</div>
+    <h2 class="section-title reveal">Technology With <span class="accent-word">Purpose</span></h2>
+    <p class="section-sub reveal">Technology should not only create products. It should create opportunities, knowledge, and positive impact.</p>
+
+    <div class="impact-grid reveal-stagger">
+      <div class="impact-card">
+        <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg></div>
+        <h3>Next Stack</h3>
+        <p>Bridging the gap between academia and the real job market through student-led workshops and practical, career-focused programs.</p>
+        <span class="status-tag">Active Initiative</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3>Scratch Programming Workshop</h3>
+        <p>An educational programming initiative introducing younger students to the basics of programming through Scratch.</p>
+        <span class="status-tag">Concept</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg></div>
+        <h3>Sustainability</h3>
+        <p>The Smart Refill Station concept â an eco-friendly campus solution designed around refill stations for everyday liquid products.</p>
+        <span class="status-tag">Academic Project</span>
+      </div>
+      <div class="impact-card">
+        <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Future Volunteering</h3>
+        <p>Placeholder for future volunteering and community initiatives â building on past experience with UNICEF training, relief programs, and the Red Crescent.</p>
+        <span class="status-tag">Open to Opportunities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= ROADMAP ================= -->
+<section class="section-pad" id="roadmap">
+  <div class="container">
+    <div class="eyebrow reveal">The Journey</div>
+    <h2 class="section-title reveal">Where I'm <span class="accent-word">Headed</span></h2>
+
+    <div class="roadmap reveal-stagger">
+      <div class="road-item">
+        <div class="road-dot">2025</div>
+        <h4>Foundations</h4>
+        <p>Started developing practical business and technology experience.</p>
+      </div>
+      <div class="road-item">
+        <div class="road-dot">25â26</div>
+        <h4>Studies &amp; Growth</h4>
+        <p>Computer Science studies and technical development at Albukhary International University.</p>
+      </div>
+      <div class="road-item">
+        <div class="road-dot">2026</div>
+        <h4>Expansion</h4>
+        <p>Expanded into entrepreneurship, marketing, technology projects, and student initiatives.</p>
+      </div>
+      <div class="road-item">
+        <div class="road-dot">Next</div>
+        <h4>Future</h4>
+        <p>AI Â· Software Engineering Â· Entrepreneurship Â· Social Impact Â· International Opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= CONTACT ================= -->
+<section class="section-pad" id="contact">
+  <div class="container">
+    <div class="contact-cta reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's Build Something Together.</h2>
+      <p>I'm open to internships, collaborations, freelance projects, volunteering opportunities, and technology-driven initiatives.</p>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/omarshawqi/" target="_blank" rel="noopener" class="social-pill magnetic"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://github.com/omarshawqi7722" target="_blank" rel="noopener" class="social-pill magnetic"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:7omarshawqi7@gmail.com" class="social-pill magnetic"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://wa.me/967772291980" target="_blank" rel="noopener" class="social-pill magnetic"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <form class="contact-form-wrap reveal" id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="e.g. Ahmed Ali" autocomplete="name" required>
+          <span class="form-error" id="err-name"></span>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Your Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="e.g. ahmed@email.com" autocomplete="email" required>
+          <span class="form-error" id="err-email"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cf-subject">Subject</label>
+        <input type="text" id="cf-subject" name="subject" placeholder="e.g. Project Collaboration" required>
+        <span class="form-error" id="err-subject"></span>
+      </div>
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+        <span class="form-error" id="err-message"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block magnetic" id="cf-submit">
+        <span id="cf-btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+      </button>
+      <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>OMAR <span class="last">SHAWQI</span></h3>
+        <p>Building Technology, Business &amp; Innovation.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/omarshawqi/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/omarshawqi7722" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:7omarshawqi7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/967772291980" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Â© 2026 Omar Shawqi. All rights reserved.</span>
+      <span>Malaysia â Kedah, Alor Setar</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ================= OMAR.OS ================= -->
+<button class="omaros-toggle" id="omaros-toggle" aria-haspopup="true" aria-controls="omaros-window">
+  <span class="blip"></span> OMAR.OS
+</button>
+
+<div class="omaros-window" id="omaros-window" role="dialog" aria-label="OMAR.OS interactive terminal">
+  <div class="omaros-bar">
+    <div class="omaros-dots"><span></span><span></span><span></span></div>
+    <span class="omaros-title">omar.os â v2.0</span>
+    <button class="omaros-close" id="omaros-close" aria-label="Close OMAR.OS">â</button>
+  </div>
+  <div class="omaros-body" id="omaros-body">
+    <div class="omaros-line"><span class="prompt">omar@os</span> ~ % whoami</div>
+    <div class="omaros-line">Omar Shawqi â CS Student Â· Entrepreneur Â· Builder</div>
+    <div class="omaros-line"><span class="prompt">omar@os</span> ~ % ls sections</div>
+    <div class="omaros-cmds">
+      <button class="omaros-cmd" data-goto="#home">home</button>
+      <button class="omaros-cmd" data-goto="#about">about</button>
+      <button class="omaros-cmd" data-goto="#projects">projects</button>
+      <button class="omaros-cmd" data-goto="#experience">experience</button>
+      <button class="omaros-cmd" data-goto="#ventures">ventures</button>
+      <button class="omaros-cmd" data-goto="#contact">contact</button>
+    </div>
+  </div>
+  <div class="omaros-input-row">
+    <span class="prompt">$</span>
+    <input type="text" class="omaros-input" id="omaros-input" placeholder="type a commandâ¦ (help)" autocomplete="off">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030509">
+
+<title>Omar Shawqi | Computer Science Student, Entrepreneur &amp; AI/Web Developer</title>
+<meta name="description" content="Omar Shawqi is a Computer Science student, entrepreneur, AI and web development enthusiast, and digital marketing practitioner building technology, businesses, and innovative solutions.">
+<meta name="author" content="Omar Shawqi">
+<link rel="canonical" href="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Omar Shawqi | Building Technology, Business & Innovation">
+<meta property="og:description" content="Computer Science student, entrepreneur, and AI &amp; web developer building digital products, businesses, and technology-driven solutions.">
+<meta property="og:url" content="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/">
+<meta property="og:image" content="https://omarshawqi7722.github.io/omar-shawqi-portfolio-v2/images/og-cover.png">
 <meta property="og:site_name" content="Omar Shawqi — Portfolio">
 
 <!-- Twitter -->
