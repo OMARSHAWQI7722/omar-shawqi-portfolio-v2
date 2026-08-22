@@ -213,31 +213,85 @@ const projectsData = [
 
 const certsData = [
   {
-    id: "unicef",
+    id: "web-dev-jhu",
+    category: "technology",
+    name: "HTML, CSS, and JavaScript for Web Developers",
+    org: "Johns Hopkins University (Coursera)",
+    year: "2025",
+    link: "https://coursera.org/verify/HDDPVY1H7BAQ",
+    placeholder: false
+  },
+  {
+    id: "elements-of-ai",
+    category: "technology",
+    name: "Elements of AI",
+    org: "University of Helsinki & MinnaLearn",
+    year: "2023",
+    link: "https://certificates.mooc.fi/validate/yid06540yfl",
+    placeholder: false
+  },
+  {
+    id: "ai-for-everyone",
+    category: "technology",
+    name: "AI For Everyone",
+    org: "DeepLearning.AI (Coursera)",
+    year: "2023",
+    link: "https://coursera.org/verify/AB5LYS8RSVNR",
+    placeholder: false
+  },
+  {
+    id: "icdl",
+    category: "technology",
+    name: "International Computer Driving License (ICDL v6)",
+    org: "New Horizons Learning Centers",
+    year: "2023",
+    link: "certificates/icdl.jpg",
+    placeholder: false
+  },
+  {
+    id: "programming-camp",
+    category: "technology",
+    name: "Beginner Programming Camp",
+    org: "Third Eye",
+    year: "2023–2024",
+    link: "certificates/programming-camp.jpg",
+    placeholder: false
+  },
+  {
+    id: "excel-microsoft",
+    category: "data",
+    name: "Work Smarter with Microsoft Excel",
+    org: "Microsoft (Coursera)",
+    year: "2023",
+    link: "https://coursera.org/verify/JHPTBDTLMZKX",
+    placeholder: false
+  },
+  {
+    id: "unicef-data-analysis",
+    category: "data",
+    name: "Data Analysis",
+    org: "UNICEF (Agora)",
+    year: "2026",
+    link: "certificates/unicef-data-analysis.jpg",
+    placeholder: false
+  },
+  {
+    id: "google-digital-marketing",
+    category: "marketing",
+    name: "Digital Marketing Basics",
+    org: "Google Skills / IAB Europe",
+    year: "2023",
+    link: "https://learndigital.withgoogle.com/link/1g13k7gbvgg",
+    placeholder: false
+  },
+  {
+    id: "unicef-training",
     category: "other",
     name: "UNICEF Training Programs",
     org: "Community & Child Protection",
     year: "2023",
-    link: null,
+    link: "certificates/unicef-child-protection.jpg",
     placeholder: false
-  },
-  {
-    id: "placeholder-tech",
-    category: "technology",
-    name: "Add Your Technology Certificate",
-    org: "Organization name",
-    year: "Year",
-    link: null,
-    placeholder: true
-  },
-  {
-    id: "placeholder-business",
-    category: "business",
-    name: "Add Your Business Certificate",
-    org: "Organization name",
-    year: "Year",
-    link: null,
-    placeholder: true
   }
 ];
 
